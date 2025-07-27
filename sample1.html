@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="fr">
+	<head>
+		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0">
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta http-equiv="Content-Security-Policy" content="default-src *;
+															font-src 'self' data:;
+															img-src 'self' data:;
+															style-src 'self' 'unsafe-inline';
+															script-src 'self' 'unsafe-inline' 'unsafe-eval' http:;" />
+															<!--  -->
+		<meta content="IE=Edge" http-equiv="X-UA-Compatible">
+		<link href="sample1.css" rel="stylesheet" type="text/css">
+
+
+
+
+
+	</head>
+	<body>
+
+        <div id="eventposition" class="hack-fronttexture"></div>
+
+        <div id="splashscreen" style="z-index:100000; position:fixed; left:0; top:0; right:0; bottom:0; text-align:center; background-color:#FFF; -webkit-transition:all 0.5s ease; transition:all 0.5s ease;">
+
+	        <div id="splashscreen-title" class="hack-fronttexture">
+				<div>
+				  <p>a</p>
+				  <p>b</p>
+				  <p>c</p>
+				  <p>d</p>
+				  <p>e</p>
+				  <p>f</p>
+				  <p>g</p>
+				  <p>h</p>
+				  <p>i</p>
+				</div>
+			</div>
+
+			<div id="splashscreen-app-titleA" class="hack-fronttexture splashscreen-app-title">TitleA</div>			
+			<div id="splashscreen-app-titleB" class="hack-fronttexture splashscreen-app-title">TitleB</div>			
+        	<div class="hack-fronttexture splashscreen-logo-vendor"></div>
+        	<div class="hack-fronttexture splashscreen-wait-icon"></div>
+        	<div class="hack-fronttexture splashscreen-wait-text">Wait text</div>
+        </div>
+
+        <div id="virtual-body">
+        	<div id="mainbackground" class="windowClass"></div>
+
+	        <header class="header">
+	        	<div id="header-wifi"><div id="header-wifi-info"></div></div>
+	        	<div id="header-battery"></div>
+	        	<div id="header-battery-charge"></div>
+	        	<div id="header-title"></div>
+	        	<div id="mainmenu-special-behaviour"></div>
+	        	<div id="header-time"></div>
+
+	        	<div id="header-version"></div>
+
+	        	<div id="header-update"></div>
+
+		        <div class="logo"></div>
+
+		        <div class="debug" id="debugicon"></div>
+	        </header>
+
+	        <nav class="nav">
+	        	<a href="javascript: void(0);" onclick="ctrlButtonExitOnClick();">Retour</a>
+	        	<div id="nav-subtitle"></div>
+	        </nav>
+
+	        <div class="aboutmenu menupage windowClass">
+	        	<div id="browser-info"></div>
+	        	<div id="application-info"></div>
+	        </div>
+
+	        <div class="wallpapermenu windowClass" id="wallpapermenu-container" onclick="appWallpaper_OnClick();">
+
+
+	        	<!-- <div style="position: absolute; left: 290px; top: 320px; width:1340px; height: 441px;"> -->
+	        	<div style="position: absolute; left:15.104vw; top:29.639vh; width:69.792vw; height:40.833vh;">
+	        		<img src="img-bg/corporate-title.png" style="background-size:contain; max-width: 100%; max-height: 100%;">
+	        	</div>
+
+
+	        	<div id="wallpaper-text-A">Push button</div>
+	        	<div id="wallpaper-text-B">Push button</div>
+	        </div>
+
+
+
+
+
+	        <div class="mainmenu menupage noselect windowClass" id="mainmenu-container">
+
+
+	        	<div id="mainmenu-username"></div>
+	        </div>
+
+			<!-- 
+			########################################################################################################
+			########################################################################################################
+
+			Catalogue public
+
+			########################################################################################################
+			########################################################################################################
+			-->			
+
+	        <div class="listproductthumbnails menupage noselect hack-fronttexture windowClass" style="/*display: none*/" id="app-productthumbnails-main">
+				<div class="header-container hack-fronttexture">
+					<div class="header-panel hack-fronttexture">
+						<!--
+						<div class="button-nav" onclick="navSwitchMode(-1);"></div>
+						-->
+<!--						
+						<div class="back-container" onclick="ctrlButtonExitOnClick();"> 
+							<h1>
+								<span class="back-text">
+									<span>Back</span>
+								</span>
+							</h1>
+						</div>
+-->
+						<div 
+							class="back-container hack-fronttexture" 
+							onclick="appProductThumbnails_ExitButton();"
+						 	id="productthumbnails-backbutton-containerB"> 
+							<h1>
+								<span class="back-text hack-fronttexture" id="productthumbnails-backbutton">
+									<span>Back</span>
+								</span>
+							</h1>
+						</div>
+
+						<div 
+							class="back-container hack-fronttexture"
+							onclick="appProductThumbnails_ExitButton();"
+							id="productthumbnails-backbutton-containerA">
+
+							<h1>
+								<span class="back-text hack-fronttexture" id="productthumbnails-backbutton">
+									<span>Back</span>
+								</span>
+							</h1>
+						</div>
+
+						<div 
+							class="back-container hack-fronttexture"
+							onclick="appProductThumbnails_DirectExitButton();"
+							id="productthumbnails-backbutton-containerC">
+
+							<h1>
+								<span class="back-text hack-fronttexture" id="productthumbnails-backbutton">
+									<span>Back</span>
+								</span>
+							</h1>
+						</div>
+
+
+					</div>
+				</div>
+				<div id="productthumbnails-leftpanel-background"></div>
+
+				<a href="javascript:void(0);" onclick="appProductThumbnails_ShowSearch(1);" id="productthumbnail-showsearch-1" class="button hack-fronttexture">...</a>
+				<a href="javascript:void(0);" onclick="appProductThumbnails_ShowSearch(2);" id="productthumbnail-showsearch-2" class="button hack-fronttexture">...</a>
+
+				<div class="productthumbnail-search-container productthumbnail-hidesearch" id="productthumbnail-search-container">
+					<div class="layout-4line-mode1 search-index">
+	          			<input 
+	          				type="text" 
+	          				class="search-text"
+	          				id="productshow-search-input-id" 
+	          				value="Que recherchez-vous ?"
+	          				onkeydown="if (event.keyCode==9) { return false; } appProductThumbnails_KeySearch();"  
+	          				onblur="if(this.value == '') { this.value = 'Searching for ?'; }" 
+	          				onfocus="if(this.value == 'Searching for ?') { this.value = ''; }" 
+	          				name="s">
+	          			<!--<div id="search-button-id" class="search-button" onclick="validateInProductSearch()">Rechercher</div>-->
+					</div>
+	          		<div class="layout-4line-mode1 search-result"></div>
+				</div>
+
+	        	<div id="productthumbnails-criteres" class="hack-fronttexture">
+
+
+	        		<div id="app-productthumbnails-query-a" class="query-array"></div>
+	        		<div id="app-productthumbnails-query-b" class="query-array"></div>
+	        		<div class="app-productthumbnails-query-separator" id="app-productthumbnails-query-separator-1"></div>
+	        		<div id="app-productthumbnails-query-c" class="query-array"></div>
+	        		<div class="app-productthumbnails-query-separator" id="app-productthumbnails-query-separator-2"></div>
+	        		<div id="app-productthumbnails-query-d" class="query-array"></div>
+
+
+
+	        		<div class="app-productthumbnails-query-separator" id="app-productthumbnails-query-separator-3"></div>
+
+		        	<div class="app-productthumbnails-density-switch">
+
+
+		        		<p style='display: none;'>display</p>
+			        	<label class="switch switch-left-right" style='display: none;'>
+							<input class="switch-input" type="checkbox" id="app-productthumbnails-density-switch-enable-high" onchange="appProductThumbnails_DensitySwitchChange();"/>
+							<span class="switch-label" data-on="4 x 4" data-off="3 x 3" id="app-productthumbnails-density-switch-label"></span> 
+							<span class="switch-handle"></span> 
+						</label>
+
+
+						<div class="search-index">
+							<input id="app-productthumbnails-search-input" type="text" name="s" class="search-text" placeholder="Product search" value="">
+		          			<div id="search-reference-button-id" class="search-button">Search</div>
+						</div>
+		        		<div id="productthumbnails-search-product">
+			        		<div class="search-container">
+			          			<div class="search-result hack-fronttexture" id="app-productthumbnails-search-result"></div>
+			        		</div>
+						</div>
+
+						<a href="javascript:void(0);" onclick="appProductThumbnails_CatalogModeOff();" class="button hack-fronttexture" id="productthumbnails-catalog-mode-back">Back</a>
+
+					</div>
+
+					<div class="app-productthumbnails-query-separator" id="app-productthumbnails-query-separator-4"></div>
+
+					<div id="app-productthumbnails-dashboard-vertical-separator-mode"></div>
+					<div class="app-productthumbnail-access-editclient">
+						<a href="javascript:void(0);" onclick="appProductThumbnailsEx_ShowClientEdit();" class="button button-info-client hack-fronttexture" id="">Info</a>						
+						<div id="app-productthumbnails-displayoption-text"></div>
+				
+						<p id="app-productthumbnail-info-client-text"></p>
+					</div>
+
+					<div class="app-productthumbnails-drop-down-up">
+						<div href="javascript:void(0);" id="app-productthumbnails-drop-down-up-image" mode="0">
+						</div>
+					</div>
+
+
+	        		<div class="app-productthumbnails-query-separator" id="app-productthumbnails-query-separator-5"></div>
+
+	        		<div class="app-productthumbnails-preselect">
+	        			<h6>preselect lists</h6>
+						<div class="button-preselection" id="app-productthumbnails-button-preselect0">S0</div>
+						<div class="button-preselection" id="app-productthumbnails-button-preselect1">S1</div>
+						<div class="button-preselection" id="app-productthumbnails-button-preselect2">S2</div>
+						<div class="button-preselection" id="app-productthumbnails-button-preselect3">S3</div>
+						<div class="button-preselection" id="app-productthumbnails-button-preselect4">S4</div>
+						<div class="button-preselection" id="app-productthumbnails-button-preselect5">S5</div>
+						<div class="button-preselection" id="app-productthumbnails-button-preselect6">S6</div>
+						<div class="button-preselection" id="app-productthumbnails-button-preselect7">S7</div>
+						<div class="button-preselection" id="app-productthumbnails-button-preselect8">S8</div>
+					</div>
+
+	        		<div class="app-productthumbnails-query-separator" id="app-productthumbnails-query-separator-6"></div>
+
+
+					<div id="app-productthumbnail-whynot">
+						<a href="javascript:void(0);" class="button button-whynot hack-fronttexture" id="">Why that</a>
+					</div>
+
+					<div id="app-productthumbnail-basket">
+						<a href="javascript:void(0);" class="button button-basket hack-fronttexture" id="app-productthumbnail-basket-go" onclick="appProductThumbnail_BasketShow();">Basket</a>
+
+					</div>
+
+	        	</div>
+
+	        	<div id="app-productthumbnails-basket-text"></div>
+
+	        	<div id="app-productthumbnails-query-result" class="hack-fronttexture verticalscrollbar" style="opacity: 1; z-index:1000; overflow:hidden;"></div>
+	        	<!--<div id="app-productthumbnails-query-result" class="hack-fronttexture" style="opacity: 1; z-index:1000;"></div>-->
+	        	<div id="app-productthumbnails-icon-loading" style="display:none;"></div>
+
+	        	<div id="app-productthumbnails-loading">
+	        		<div id="app-productthumbnails-loading-concrete-bar-background">
+	        			<div id="app-productthumbnails-loading-concrete-bar"></div>
+	        		</div>
+	        	</div>
+
+	        	<div id="app-productthumbnails-product-container" class="hack-fronttexture" style="opacity: 0; z-index:10;"></div>
+
+	        	<div id="app-productthumbnails-dynamic-mask"></div>
+
+				<a href="javascript:void(0);" onclick="appProductThumbnails_ShowThumbnail(true);" class="button hack-fronttexture" id="productthumbnail-button-showthumbnail"><!--Présentation Vignettes--></a>
+
+
+	        </div>
+		</div>
+
+	</body>
+</html>
+	
